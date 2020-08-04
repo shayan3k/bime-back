@@ -100,18 +100,14 @@ require("./app/routes/AdminRoutes")(app);
 require("./app/routes/UserRoutes")(app);
 require("./app/routes/PeymentRoutes")(app);
 
-// static folder route
-app.use(express.static("build"));
-// app.get("/static-index", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "static", "index.html"));
-// });
-
-// app.post("/this", async (req, res) => {
-// });
-
 //Redirect all other routes
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "build", "index.html"));
+app.get("/", (req, res) => {
+  res
+    .json({
+      message:
+        "Welcome to Authentication system provided with Express.js and MongoDB",
+    })
+    .end();
 });
 
 // set port, listen for requests
