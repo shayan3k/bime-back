@@ -17,15 +17,7 @@ const app = express();
 //CORS middleware
 app.use(
   cors({
-    origin: [
-      "*",
-      `${process.env.REACT_APP_URL}`,
-      "http://localhost:3000",
-      "https://manshour.herokuapp.com",
-      "http://manshour.herokuapp.com",
-      // "http://manshour-deploy-shayan3k.fandogh.cloud",
-      // "https://manshour-deploy-shayan3k.fandogh.cloud",
-    ],
+    origin: ["*", `${process.env.REACT_APP_URL}`],
     credentials: true,
   })
 );
@@ -53,7 +45,7 @@ app.use(
 // Cookie parser for JWT
 app.use(cookieParser());
 
-// app.use(RefreshTokenMiddleware);
+app.use(RefreshTokenMiddleware);
 
 // Enable file Upload
 app.use(
@@ -111,7 +103,7 @@ app.get("/", (req, res) => {
 });
 
 // set port, listen for requests
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8080;
 app
   .listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
