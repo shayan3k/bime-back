@@ -1,0 +1,41 @@
+{
+  "name": "bime_back",
+  "version": "1.0.0",
+  "description": "No description to state at this point!",
+  "main": "server.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "ShayaNNN",
+  "license": "GPLv3",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.4",
+    "express-handlebars": "^3.1.0",
+    "express-paginate": "^1.0.2",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.25",
+    "node-localstorage": "^2.1.6",
+    "nodemailer": "^6.4.11",
+    "secure-web-storage": "^1.0.2",
+    "uuid": "^3.4.0",
+    "zarinpal-checkout": "^0.2.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
