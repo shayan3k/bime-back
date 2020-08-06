@@ -15,7 +15,7 @@ module.exports = (app) => {
   );
 
   router.post("/logout", AuthController.logout);
-  router.get("/jwt-student", AuthController.jwtStudent);
+  router.get("/jwt-user", AuthController.jwtUser);
   router.get("/jwt-admin", AuthController.jwtAdmin);
   router.get("/is-authenticated", AuthController.isAuthenticated);
 

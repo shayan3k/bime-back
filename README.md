@@ -39,10 +39,10 @@ details : 'GUESTS COULD COMPLETE REGISTRATION'
 },
 
 {
-url : '/api/auth/jwt-student',
+url : '/api/auth/jwt-user',
 auth : public ,
 method : 'GET',
-details : 'DEVELOPER COULD AUTHENTICATE AS A STUDENT THROUGH THIS API'
+details : 'DEVELOPER COULD AUTHENTICATE AS A USER THROUGH THIS API'
 },
 
 {

@@ -231,7 +231,7 @@ exports.isAuthenticated = async (req, res, next) => {
     let user = jwt.verify(token, process.env.JWT_THE_TOKEN_SECRET);
     console.log("the user is ", user);
     user = user.user;
-    if (user.role != "student" && user.role != "admin")
+    if (user.role != "user" && user.role != "admin")
       return res.json({
         success: false,
         err: true,
@@ -255,7 +255,7 @@ exports.isAuthenticated = async (req, res, next) => {
   }
 };
 
-exports.jwtStudent = async (req, res) => {
+exports.jwtUser = async (req, res) => {
   //check if User exists
   //code.phone_number
   const user = await db.User.findOne({ phone_number: "09127170126" });

@@ -3,7 +3,7 @@ module.exports = (app) => {
   const PeymentValidation = require("../validations/PeymentValidation");
 
   const UserValidations = require("../validations/UserValidations");
-  const jwtStudentMiddleware = require("../middlewares/JWTStudentMiddleware");
+  const jwtUserMiddleware = require("../middlewares/JWTUserMiddleware");
   const PaginationPageMiddleware = require("../../app/middlewares/PaginationPageMiddleware");
 
   var router = require("express").Router();
@@ -42,10 +42,6 @@ module.exports = (app) => {
     UserController.userSubmitPaymentRequest
   );
 
-  app.use(
-    "/api/user",
-    [jwtStudentMiddleware, PaginationPageMiddleware],
-    router
-  );
+  app.use("/api/user", [jwtUserMiddleware, PaginationPageMiddleware], router);
   // app.use("/api/user",[PaginationPageMiddleware], router);
 };

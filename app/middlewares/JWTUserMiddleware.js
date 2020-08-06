@@ -21,7 +21,7 @@ module.exports = async (req, res, next) => {
         message: "یوزری بلاک شده است.",
       });
 
-    if (user.role != "student")
+    if (user.role != "user")
       return res.json({
         success: false,
         err: true,
